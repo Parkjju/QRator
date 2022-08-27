@@ -7,6 +7,7 @@ import { Container } from '../../components/Container';
 import { Text } from '../../components/Text';
 import { idState } from '../../recoil/id/id';
 import { Header, Input, LoginBox } from './SignIn.styled';
+
 const SignIn = () => {
     const navigate = useNavigate();
     const settingId = useSetRecoilState(idState);

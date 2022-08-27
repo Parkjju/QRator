@@ -5,13 +5,14 @@ import { Container } from '../../components/Container';
 import { Camera, CameraBox } from '../Entrance/Entrance.styled';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import jsQR from 'jsqr';
 
 const Information = () => {
     const [qr, setQr] = useState(false);
     useEffect(() => {
         axios
             .get(
-                `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=www.naver.com`
+                `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://localhost:8080/api/enter`
             )
             .then((response) => {
                 console.log(response);
@@ -59,7 +60,7 @@ const Information = () => {
 
             <Img
                 src={
-                    'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=www.naver.com'
+                    'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://localhost:8080/api/enter'
                 }
             />
         </Container>
