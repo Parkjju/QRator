@@ -17,10 +17,19 @@ public class Club {
     @GeneratedValue
     private Long id;
     private String clubName;
+    private String content;
+    private String phoneNumber;
     private int currentCount;
+
+    public Club(String clubName, int count, String phoneNumber, String content) {
+        this.clubName = clubName;
+        this.currentCount = count;
+        this.phoneNumber = phoneNumber;
+        this.content = content;
+    }
 
     @OneToMany(mappedBy = "club")
     private List<User> users = new ArrayList<>();
 
-//    private List<String> temp = new ArrayList<>();
+
 }
