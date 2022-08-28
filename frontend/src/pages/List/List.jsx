@@ -21,14 +21,13 @@ const List = () => {
                 <Information />
             ) : (
                 <ListBox>
-                    {data ? (
-                        <Link to={`./1`}>
-                            <ListTab>
-                                <GroupName>멋쟁이 사자처럼</GroupName>
-                                <GroupMemberCount>0 / 20</GroupMemberCount>
-                            </ListTab>
-                        </Link>
-                    ) : null}
+                    <Link to={`./1`}>
+                        <ListTab>
+                            <GroupName>멋쟁이 사자처럼</GroupName>
+                            <GroupMemberCount>0 / 20</GroupMemberCount>
+                        </ListTab>
+                    </Link>
+
                     {/* {data.map((item, index) => (
                     ))} */}
                 </ListBox>
